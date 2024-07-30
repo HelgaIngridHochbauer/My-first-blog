@@ -1,4 +1,4 @@
-# University Blog Project
+# Blog Project
 
 Welcome to the My Blog ! This is a multi-page website developed as a first-year university project. The site is built using Django for the backend and incorporates HTML, CSS, and JavaScript for the frontend. The blog includes features such as posts, reviews, a chatbox, and more. The admin has the ability to add posts, which are formatted to match the site's design.
 
