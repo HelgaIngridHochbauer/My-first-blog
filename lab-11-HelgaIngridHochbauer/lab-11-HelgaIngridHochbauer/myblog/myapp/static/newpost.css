@@ -1,0 +1,38 @@
+body {
+    animation: animate-fade 3s;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #c8aed3;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #4b1650;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.content-box {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

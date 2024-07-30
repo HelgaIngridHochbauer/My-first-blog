@@ -1,0 +1,95 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #d4bfdd; /* Soft lilac background */
+    color: #4b1650; /* Dark purple text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+  
+header {
+   
+   
+    text-align: center;
+    width: 100%;
+  margin-top: 200px;
+    padding: 20px;
+}
+
+nav {
+    background-color: #c8aed3; 
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #290b2c /* Dark purple links */
+    margin: 10px;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #c8aed3; 
+    color: #fff; 
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    background-color: #290b2c; 
+    color: #f2e7fa; 
+    padding: 10px;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px #1d081f;
+}
+
+table td {
+    padding: 15px;
+    border-bottom: 1px solid #dfd0e0;
+}
+
+table td:first-child {
+    background-color: #a093b2; 
+    color: #debdf5; 
+    font-weight: bold;
+    text-transform: uppercase;
+    border-right: 1px solid #ded9f7;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

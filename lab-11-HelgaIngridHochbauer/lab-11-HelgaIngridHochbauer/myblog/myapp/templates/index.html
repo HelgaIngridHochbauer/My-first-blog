@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helga - Blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+    <link rel="stylesheet" href="{% static 'index_BackToTop.css' %}">
+    <link rel="stylesheet" href="{% static 'index_SearchPosts.css' %}">    
+    <script src="{% static 'index_BackToTop.js' %}"></script>
+    <script src="{% static 'menu.js' %}"></script>
+    <script src="{% static 'index_SearchPosts.js' %}"></script>
+    <style>
+        /* CSS for the review section */
+        /* CSS for the review section */
+.reviews-section {
+    background-color: #c8aed3;
+    padding: 20px;
+    border-radius: 10px;
+    align-content: center;
+    align-self: flex-end;
+    width: 96%;
+}
+
+.reviews-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #302336;
+    text-align: center;
+}
+
+.reviews-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reviews-section li {
+    background-color: #d1c2d8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.reviews-section li p {
+    margin: 5px 0;
+}
+
+
+.reviews-section li a:hover {
+    text-decoration: underline;
+}
+
+.reviews-section .leave-review {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a202ff;
+    color: #d0c5d4;
+    text-align: center;
+  
+}
+
+.reviews-section button{color: rgb(44, 2, 48); 
+    background-color: rgb(205, 186, 235);
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: bold;
+    font-weight: 200;
+    padding: 1%;
+    margin: 2px;
+    border: 0px;
+    animation: animate-fade 3s;}
+
+    </style>
+</head>
+
+<body>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><img src="{% static 'arrow.png' %}" width="25" height="23" alt="Back on top"></button>
+    <header >
+        <div class="logo">
+            <img src="{% static '1HELGAS BLOG.png' %}" ></div>
+            
+       <h1>Welcome</h1>
+       <button id="menu-btn">&#9776;</button>
+       
+    </header>
+    
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'form' %}">Form</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+        <a href="{% url 'chatbot' %}">Chatbot</a>
+        
+    </nav>
+    <main>
+        {% block content %}
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" onclick="searchPosts()">Search</button>
+            </div>
+       
+        {% for post in posts %}
+        <article>
+            <a href="{% url 'post_detail' post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
+            <p>Posted on {{ post.post_date }}</p>
+            <a href="{% url 'post_detail' post.id %}"><img src="{{ post.image.url }}" alt="Description"></a>
+            <p>{{ post.paragraph }}</p>
+            
+        </article>
+        {% endfor %}
+    
+    
+
+    
+         {% endblock %}
+    </main>
+    
+    <section class="reviews-section">
+        <h2>Reviews</h2>
+        <ul>
+            {% for review in reviews %}
+            <li>
+                <p><strong>{{ review.email }}</strong> ({{ review.date }})</p>
+                <p>Rating: {{ review.rating }}</p>
+                <p>{{ review.comment }}</p>
+                {% if review.id %}
+                <a href="{% url 'update_review' review.id %}"><button>Update</button></a>
+                <a href="{% url 'delete_review' review.id %}"><button>Delete</button></a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'submit_review' %}"><button>Leave a Review</button></a>
+    </section>
+    
+    
+    
+</body>
+</html>
