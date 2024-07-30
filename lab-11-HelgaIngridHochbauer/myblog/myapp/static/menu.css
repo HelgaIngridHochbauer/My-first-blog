@@ -1,0 +1,85 @@
+header{ background-color:#290b2c;
+    color: rgb(184, 145, 209);
+    animation: animate-fade 3s;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: animate-fade 3s;
+}
+
+.logo {
+    margin-right: auto; 
+    /* Pushes the logo to the far left */
+}
+.logo img {
+    width: 200px; /* Adjust width of the logo as needed */
+    height: auto;
+}
+h1{
+    animation: example 5s infinite alternate;
+    width: 40%;
+ 
+    margin: auto;
+}  
+
+nav {
+    background-color: #cbc0cf; 
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in width calculation */
+    font-family: 'Trebuchet MS', sans-serif;
+    display: block;
+
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #290b2c; /* Dark purple links */
+    margin: 40px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    nav a {
+        width: 100%;
+        padding-left: 60px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-right: 60px;
+       
+    }
+}
+
+nav a:hover {
+    background-color: #c8aed3; 
+    color: #fff; 
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+#menu-btn {
+    background-color: #290b2c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#menu-btn:hover {
+    background-color: #4b1650;
+}
+
+nav.hide {
+    display: none;
+}

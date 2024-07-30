@@ -1,0 +1,19 @@
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Adjust z-index as needed */
+    font-size: large;
+    border: none;
+    outline: none;
+    background-color: #431247; /* Change to purple */
+    color: rgb(184, 145, 209); /* Change text color */
+    cursor: pointer; /* Add pointer cursor */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 50%; /* Make it a circle */
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgb(184, 145, 209);
+}

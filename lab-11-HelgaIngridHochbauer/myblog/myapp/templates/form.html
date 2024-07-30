@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}"
+    <script src="{% static 'js/form.js' %}"></script>
+</head>
+
+<body>
+    <form action="{% url 'submit_form' %}" method="post" onsubmit="return validateForm()">
+
+        {% csrf_token %}
+        <fieldset>
+            <legend>General Information</legend>
+            <label>Salutation
+                <select name="salutation">
+                    <option>--None--</option>
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>Mrs.</option>
+                    <option>Dr.</option>
+                    <option>Prof.</option>
+                </select>
+            </label>
+            <label>University
+                <select name="university">
+                    <option>--None--</option>
+                    <option>UVT</option>
+                    <option>UPT</option>
+                </select>
+            </label>
+            <label>First name: <input name="firstName" id="firstName" required /></label>
+            <label>Last name: <input name="lastName" id="lastName" required /></label>
+            Gender:
+            <label><input type="radio" name="gender" value="male" />Male</label>
+            <label><input type="radio" name="gender" value="female" />Female</label>
+            <label>Email:<input type="email" name="email" required /></label>
+            <label>Date of Birth:<input type="date" name="birthDate" required></label>
+            <label>Address: <textarea name="address" cols="30" rows="3" required></textarea></label>
+        </fieldset>
+        <fieldset>
+            <legend>Hobbies</legend>
+            <label><input type="checkbox" name="hobby" value="painting" />painting</label>
+            <label><input type="checkbox" name="hobby" value="reading" />reading</label>
+            <label><input type="checkbox" name="hobby" value="sport" />sport</label>
+            <label><input type="checkbox" name="hobby" value="movies" />movies</label>
+            <label><input type="checkbox" name="hobby" value="gardening" />gardening</label>
+            <label><input type="checkbox" name="hobby" value="writing" />writing</label>
+            <label><input type="checkbox" name="hobby" value="jogging" />jogging</label>
+            <label><input type="checkbox" name="hobby" value="chess" />chess</label>
+            Tell us a story about your greatest passion:
+            <textarea name="passion" cols="100" rows="6" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Experience</legend>
+            Have you ever worked before?
+            <select name="work">
+                <option>Yes</option>
+                <option>No</option>
+                <option>Yes but not in my field of study</option>
+            </select>
+            Have you ever volunteered before?
+            <select name="volunteer">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            What languages do you speak?
+            <label><input type="checkbox" name="languages" value="english" />English</label>
+            <label><input type="checkbox" name="languages" value="romanian" />Romanian</label>
+            <label><input type="checkbox" name="languages" value="german" />German</label>
+            <label><input type="checkbox" name="languages" value="hungarian" />Hungarian</label>
+            <label><input type="checkbox" name="languages" value="spanish" />Spanish</label>
+            <label><input type="checkbox" name="languages" value="other" />Other</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <a href="{% url 'home' %}"><button>Back</button></a>
+    </form>
+</body>
+
+</html>

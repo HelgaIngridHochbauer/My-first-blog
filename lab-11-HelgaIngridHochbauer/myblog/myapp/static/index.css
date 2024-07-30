@@ -1,0 +1,77 @@
+
+article {
+         float: left;
+        padding: 21px;
+        background-color: #c8aed3 ;
+        color:#290b2c;
+         
+         }
+body {
+        animation: animate-fade 3s;
+        font-family: 'Trebuchet MS', sans-serif;
+    background-color: #c8aed3;
+padding: 0%; 
+margin: 0%;}
+
+footer { text-align: center;
+    position: absolute;
+            width: 100%; 
+            float: left;
+            bottom: 0;
+        background-color: #4b1650;}
+
+
+  
+main{background-color:#c8aed3 ;
+width: 100%;
+margin:0%;
+color:#290b2c;
+}
+
+
+img{
+    width:"400 px";
+    height:auto;
+}
+
+
+@keyframes animate-fade {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+@keyframes example {
+    0% { color:rgb(205, 186, 235); } /* Start color */
+    50% { color: rgb(208, 129, 240); } /* Midway color */
+    100% { color: rgb(148, 177, 240); } /* End color */
+      }
+   
+
+
+
+/* For screens up to 480px width (e.g., smaller mobile devices) */
+@media only screen and (max-width: 765px) {
+    article {
+        width: 100%; /* One article per row */
+    }
+}
+
+/* For screens larger than 768px (e.g., computers and laptops) */
+@media only screen and (min-width: 769px) {
+    article {
+        width: 30%;
+        height: 30%;
+    }
+}
+
+
+
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 0%;
+    margin:0%;
+    
+}
+
+

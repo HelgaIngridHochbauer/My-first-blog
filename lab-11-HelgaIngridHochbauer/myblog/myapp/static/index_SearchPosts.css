@@ -1,0 +1,32 @@
+#searchContainer {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+#searchInput {
+    margin-bottom: 10px; /* Adjust margin as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 2px solid #290b2c; /* Change border color and thickness */
+    border-radius: 7px; /* Adjust border radius as needed */
+   
+}
+
+#searchButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #cbc0cf; /* Change background color */
+    color: #290b2c; /* Change text color */
+    border: none;
+    border-radius: 7px; /* Adjust border radius as needed */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+#searchButton:hover {
+    background-color: #55195a; /* Change hover color */
+}
+
+
+
+/* Define the highlight color for found articles */
+.found-article {
+    background-color: #f0f0ff; /* Light lilac color */
+}
